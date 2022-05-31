@@ -1,4 +1,5 @@
 import csv
+from os import close
 
 def csv_reader():
 
@@ -31,6 +32,7 @@ def csv_reader():
         for row in our_reader:
             animal_list.append(row)
 
+    #print(type(csvfile))
     #print(animal_list)
 
     dictionary = dict.fromkeys(animal_list[0])
@@ -52,6 +54,7 @@ def csv_reader():
     # print(final_list)
     print(output_list)
 
+    csvfile.close()
 
     return False
 
