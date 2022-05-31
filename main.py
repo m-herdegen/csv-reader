@@ -1,23 +1,11 @@
 import csv
-from os import close
 
 def csv_reader():
 
-    # animal = {
-    #     'name':
-    #     'age':
-    #     'breed':
-    # }
 
     ## USER INPUT
     user_input = input("Please type in either cats or dogs: \n")
     file_test = 'data/' + user_input + ".csv"
-
-    ## STRETCH
-    # with open(file_test, 'r') as csv_file:
-    #     csv_reader = csv.reader(csv_file)
-    # for row in csv_reader:
-    #     print(row[0])
     
     ## OPEN THE FILE (and handle bad input)
     try:
@@ -32,11 +20,8 @@ def csv_reader():
         for row in our_reader:
             animal_list.append(row)
 
-    #print(type(csvfile))
-    #print(animal_list)
 
     dictionary = dict.fromkeys(animal_list[0])
-    #print(dictionary)
     final_list = []
     output_list = []
 
@@ -51,7 +36,6 @@ def csv_reader():
         final_list.append(dictionary)
 
     # display information about the animal
-    # print(final_list)
     print(output_list)
 
     csvfile.close()
